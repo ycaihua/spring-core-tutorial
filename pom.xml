@@ -25,6 +25,8 @@
     <modules>
         <module>springimportbeanregistrar</module>
         <module>ImportSelector</module>
+        <module>DeferredImportSelector</module>
+        <module>DynamicallyRegisterBeans</module>
     </modules>
     <dependencies>
         <dependency>
