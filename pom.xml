@@ -24,6 +24,7 @@
     </scm>
     <modules>
         <module>springimportbeanregistrar</module>
+        <module>ImportSelector</module>
     </modules>
     <dependencies>
         <dependency>

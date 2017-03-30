@@ -30,12 +30,13 @@ public class MyBeanRegistrar implements ImportBeanDefinitionRegistrar{
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
-        System.out.println("registerBeanDefinitions");
+
         GenericBeanDefinition genericBeanDefinition=new GenericBeanDefinition();
         genericBeanDefinition.setBeanClass(AppBean.class);
         genericBeanDefinition.getPropertyValues().addPropertyValue("str","Value01");
         beanDefinitionRegistry.registerBeanDefinition("appBean",genericBeanDefinition);
         BeanDefinition beanDefinition= BeanDefinitionBuilder.genericBeanDefinition(MyBeanPostProcessor.class).getBeanDefinition();
         beanDefinitionRegistry.registerBeanDefinition(MyBeanPostProcessor.class.getName(),beanDefinition);
+        System.out.println("registerBeanDefinitions");
     }
 }
